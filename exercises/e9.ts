@@ -2,7 +2,9 @@
 // Return the data object of the planet "Earth"
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
-export let findEarthData = (data) => {};
+export let findEarthData = (data: { planets: { name: string }[] }) => {
+  return data.planets.filter((planet) => planet.name === "Earth")[0];
+};
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-9"

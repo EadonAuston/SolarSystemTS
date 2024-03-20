@@ -2,7 +2,15 @@
 // Return the average temperature of all the Planets
 // Return example: 132.53
 
-export function getAveragePlanetsTemperature(data) {}
+export function getAveragePlanetsTemperature(data: {
+  planets: { avgTemp: number }[];
+}) {
+  return (
+    data.planets
+      .map((planet) => planet.avgTemp)
+      .reduce((a: number, b: number) => a + b, 0) / data.planets.length
+  );
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-13"
