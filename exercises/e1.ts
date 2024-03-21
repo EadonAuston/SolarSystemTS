@@ -2,11 +2,9 @@
 // Return an array of all Planets' names
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getPlanetNames(
-  planets: {
-    name: string;
-  }[]
-) {
+import { Planet } from "../data/data";
+
+export function getPlanetNames(planets: Planet[]) {
   return planets.map((planet) => planet.name);
 }
 

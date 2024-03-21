@@ -2,11 +2,9 @@
 // Return an array of all Asteroids' names
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getAsteroidNames(
-  asteroids: {
-    name: string;
-  }[]
-) {
+import { Asteroid } from "../data/data";
+
+export function getAsteroidNames(asteroids: Asteroid[]) {
   return asteroids.map((asteroid) => asteroid.name);
 }
 

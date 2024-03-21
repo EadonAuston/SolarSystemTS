@@ -3,9 +3,9 @@
 // Return example: 1902
 // Hint: use a Map data structure instead of an object if you want typescript to be happy
 
-export function getGreatestDiscoveryYear(
-  asteroids: { discoveryYear: number }[]
-) {
+import { Asteroid } from "../data/data";
+
+export function getGreatestDiscoveryYear(asteroids: Asteroid[]) {
   let map = new Map();
   for (let asteroid of asteroids) {
     const { discoveryYear } = asteroid;

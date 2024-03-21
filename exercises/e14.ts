@@ -2,7 +2,9 @@
 // Return the sum of orbital periods of all asteroids
 // Return example: 234234.234
 
-export function getOrbitalPeriodsSum(asteroids: { orbitalPeriod: number }[]) {
+import { Asteroid } from "../data/data";
+
+export function getOrbitalPeriodsSum(asteroids: Asteroid[]) {
   return asteroids
     .map((asteroid) => asteroid.orbitalPeriod)
     .reduce((a: number, b: number) => a + b);

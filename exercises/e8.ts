@@ -1,17 +1,17 @@
 // SPACE DATA EXERCISE 8
 // Return a Planet by a given moon name
+
+import { Planet } from "../data/data";
+
 //  must have destructured parameters
 export function findPlanetByMoon({
   planets,
   moonName,
 }: {
-  planets: {
-    name: string;
-    moons: string[];
-  }[];
+  planets: Planet[];
   moonName: string;
 }) {
-  const lowerCaseMoonName = moonName.toLowerCase(); // Convert moonName to lowercase
+  const lowerCaseMoonName = moonName.toLowerCase();
   const matchingPlanet = planets.find((planet) =>
     planet.moons?.some((moon) => moon.toLowerCase() === lowerCaseMoonName)
   );
